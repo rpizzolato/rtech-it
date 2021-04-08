@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
-		<div class="back-to-top"><a href="#page-wrapper"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div>
+		<div class="back-to-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -291,11 +291,11 @@
 
 					<!-- Icons -->
 						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							<li><a href="#" class="icon brands fa-google-plus-g"><span class="label">Google+</span></a></li>
+							<li><a href="https://twitter.com/RTechITOfficial" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://fb.me/rtechitofficial" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="https://www.instagram.com/rtechitofficial/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="https://www.linkedin.com/company/rtechitconsulting" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							<!-- <li><a href="#" class="icon brands fa-google-plus-g"><span class="label">Google+</span></a></li> -->
 						</ul>
 
 					<!-- Copyright -->
@@ -316,6 +316,25 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script>
+				//back to top button
+					$('.back-to-top').click(()=>{
+						$("html, body").animate({scrollTop: 0}, 100);
+					});
+
+					$(document).ready(()=>{
+						$('.back-to-top').css('display', 'none');
+
+						$(window).scroll(()=> {
+							if($(this).scrollTop() <= 350) {
+								$('.back-to-top').css('display', 'none').fadeOut('slow');
+							} else {
+								$('.back-to-top').css('display', 'block').fadeIn('slow');
+							}
+						})
+					})
+			</script>
 
 	</body>
 </html>
